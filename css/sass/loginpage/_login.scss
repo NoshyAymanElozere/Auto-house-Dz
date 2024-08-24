@@ -1,29 +1,22 @@
-.cards {
-  .Add-pruduct:hover {
-    @include btn-hover;
-  }
-
-  /* From Uiverse.io by Yaya12085 */
+/* From Uiverse.io by Yaya12085 */
+.login {
+  min-height: 100vh;
+  width: 100%;
+  //   background-color: var(--txtgrey-color);
 
   .form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
     background-color: #fff;
     padding: 20px;
     border-radius: 20px;
     position: relative;
-    select {
-      font-family: boldd;
-      border: none;
-      option {
-        background-color: #f9f7f7;
-      }
-    }
   }
-  // .frm {
-  //   min-height: 90vh;
-  // }
+  .frm {
+    min-height: 90vh;
+  }
   .title {
     font-size: 28px;
     color: var(--main-color);
@@ -89,15 +82,8 @@
 
   .form label {
     position: relative;
-    p {
-      font-family: boldd;
-      color: var(--main-color);
-    }
   }
-  .or {
-    font-family: boldd;
-    color: var(--main-color);
-  }
+
   .form label .input {
     width: 100%;
     padding: 10px 10px 20px 10px;
@@ -185,7 +171,15 @@
     }
   }
 }
+.logform {
+  width: 75% !important;
+}
 
+@media screen and (max-width: 768px) {
+  .logform {
+    width: 100% !important;
+  }
+}
 .lock {
   transform: scale(1.4);
   -webkit-transform: scale(1.4);
@@ -214,63 +208,5 @@
     -moz-transform: translateY(60px);
     -ms-transform: translateY(60px);
     -o-transform: translateY(60px);
-  }
-}
-
-select.input {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: url("../../../img/down-arrow.png") no-repeat left center;
-  background-size: 20px;
-  padding-right: 20px;
-  border: 1px solid #ccc;
-}
-.phto {
-  width: 100% !important;
-  img {
-    width: 100% !important;
-    max-height: 400px !important;
-  }
-}
-.logform2 {
-  width: 100%;
-}
-// start card for another servicse section
-.card {
-  margin: auto;
-  background-color: var(--light-color) !important;
-  border: none !important;
-  box-shadow: 1px 2px 1px #66666671;
-  height: 350px !important;
-  width: 250px !important;
-  border: 1px solid #66666671 !important;
-  img {
-    height: 200px;
-  }
-
-  .card-title {
-    font-family: mediam !important;
-    color: var(--main-color);
-  }
-  .card-text {
-    font-family: boldd !important;
-    color: var(--main-color) !important;
-    span {
-      color: var(--secondery-color);
-    }
-  }
-  .Add-pruduct {
-    @include btn;
-    gap: 10px !important;
-    margin: auto !important;
-  }
-  .Add-pruduct:hover {
-    @include btn-hover;
-  }
-}
-@media (max-width: 768px) {
-  .cards .title {
-    font-size: 19px;
   }
 }

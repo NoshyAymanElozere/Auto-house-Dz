@@ -18,24 +18,26 @@
   background-color: var(--dark-color);
 }
 *::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #D23534, #000);
+  background: linear-gradient(180deg, #d23534, #000);
   border-radius: 8px;
 }
 *::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #000, #D23534);
+  background: linear-gradient(180deg, #000, #d23534);
 }
 
 body {
   scroll-behavior: smooth;
   direction: rtl;
+  background-color: #f9f7f7 !important;
 }
 
 :root {
-  --main-color:#D23534;
-  --light-color:#F9F7F7;
-  --secondery-color:#C4A381;
-  --txtgrey-color:#1312121A;
-  --cart-color:#ffecec;
+  --main-color: #d23534;
+  --light-color: #f9f7f7;
+  --secondery-color: #c4a381;
+  --txtgrey-color: #1312121a;
+  --cart-color: #ffecec;
+  --orange-color: #ff6400;
 }
 
 @font-face {
@@ -46,7 +48,8 @@ body {
   font-family: boldd;
   src: url(../../Fonts/GEDinkum-Bold-1.ttf);
 }
-ul, li {
+ul,
+li {
   list-style: none;
 }
 
@@ -111,7 +114,6 @@ header .logo {
   justify-content: center;
   height: 65px;
   overflow: hidden;
-  animation: clip 5s linear infinite;
 }
 
 @keyframes clip {
@@ -175,8 +177,8 @@ header .logo {
   align-items: center;
   justify-content: center;
   padding: 10px 15px;
-  background-color: #f64b4b;
-  color: #FFF;
+  background-color: var(--orange-color);
+  color: #fff;
   font-family: mediam;
   border: none;
   border-radius: 5px;
@@ -194,12 +196,12 @@ header .logo {
   transition: 1s !important;
 }
 .cart .counter {
-  background-color: #41868f;
+  background-color: var(--orange-color);
 }
 
 .cart:hover {
   background-color: #f55353 !important;
-  box-shadow: 1px 1px 1px #FFF !important;
+  box-shadow: 1px 1px 1px #fff !important;
   transform: translateY(-2px) !important;
 }
 
@@ -210,7 +212,7 @@ header .logo {
 }
 @media (max-width: 800px) {
   .header-active {
-    background-color: #FFF;
+    background-color: #fff;
     transition: 0.8s;
   }
   .logo {
@@ -258,7 +260,9 @@ header .logo {
     outline: none;
     border: none;
   }
-  .bar, .hambrgerIcon::after, .hambrgerIcon::before {
+  .bar,
+  .hambrgerIcon::after,
+  .hambrgerIcon::before {
     content: "";
     display: block;
     width: 30px;
@@ -286,7 +290,8 @@ header .logo {
   height: 100%;
   margin-top: 70px !important;
 }
-.main-swiper .swiper-button-next, .main-swiper .swiper-button-prev {
+.main-swiper .swiper-button-next,
+.main-swiper .swiper-button-prev {
   display: none;
 }
 .main-swiper .main-sec {
@@ -295,7 +300,7 @@ header .logo {
   z-index: 1111111111111111100000;
   width: 100%;
   height: 90vh !important;
-  background-image: url(../../img/bg.jpg);
+  background-image: url(../../img/bgCars/bgCar1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -315,13 +320,13 @@ header .logo {
   transform: translate(-50%, -50%);
 }
 .main-swiper .main-sec .content .txt-info h3 {
-  color: #FFF;
+  color: #fff;
   font-size: 25px;
   font-family: boldd;
   line-height: 1.7;
 }
 .main-swiper .main-sec .content .txt-info span {
-  color: #41868f;
+  color: var(--orange-color);
 }
 .main-swiper .main-sec .content .txt-info .u {
   color: var(--main-color);
@@ -329,8 +334,11 @@ header .logo {
 .main-swiper .main-sec .content .txt-info p {
   padding-top: 10px;
   font-family: mediam;
-  color: #FFF;
+  color: #fff;
   font-size: 20px;
+}
+.main-swiper .main-sec2 {
+  background-image: url(../../img/bgCars/bgCar2.avif);
 }
 @keyframes rotation {
   0% {
@@ -344,6 +352,31 @@ header .logo {
   }
 }
 
+.points {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  background: #d23534;
+  color: #fff;
+  padding: 10px;
+  z-index: 100;
+  border-radius: 4px;
+  box-shadow: 1px 3px 7px 0px rgba(12, 12, 12, 0.5607843137);
+  font-family: mediam;
+  font-size: 15px;
+}
+.points span {
+  font-size: 16px !important;
+  font-weight: bold !important;
+  color: #fff !important;
+  padding: 0 4px;
+}
+
+@media (max-width: 768px) {
+  .points {
+    left: 10px;
+  }
+}
 .department {
   margin: 20px 0;
   background-color: var(--light-color);
@@ -428,6 +461,234 @@ header .logo {
   left: 50% !important;
 }
 
+.cards {
+  /* From Uiverse.io by Yaya12085 */
+}
+.cards .Add-pruduct:hover {
+  background-color: #f64b4b !important;
+  color: #f9f7f7 !important;
+  transition: 0.7s !important;
+  transform: translateY(-2px) !important;
+  color: #000;
+}
+.cards .form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+.cards .form select {
+  font-family: boldd;
+  border: none;
+}
+.cards .form select option {
+  background-color: #f9f7f7;
+}
+.cards .title {
+  font-size: 28px;
+  color: var(--main-color);
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  font-family: boldd;
+}
+.cards .title::before,
+.cards .title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: var(--main-color);
+}
+.cards .imgg {
+  height: 100% !important;
+}
+.cards .title::before {
+  width: 18px;
+  height: 18px;
+  background-color: var(--main-color);
+}
+.cards .title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+.cards .message,
+.cards .signin {
+  color: #131212;
+  font-size: 14px;
+  font-family: mediam;
+  font-weight: 700;
+}
+.cards .signin {
+  text-align: center;
+}
+.cards .signin a {
+  color: var(--main-color);
+}
+.cards .signin a:hover {
+  -webkit-text-decoration: underline var(--main-color);
+          text-decoration: underline var(--main-color);
+}
+.cards .flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+.cards .form label {
+  position: relative;
+}
+.cards .form label p {
+  font-family: boldd;
+  color: var(--main-color);
+}
+.cards .or {
+  font-family: boldd;
+  color: var(--main-color);
+}
+.cards .form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: none !important;
+  border-radius: 10px;
+  background-color: #f9f7f7;
+}
+.cards .form label .input + span {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  color: #bcbcbc;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+  font-family: mediam;
+}
+.cards .spann {
+  position: absolute;
+  right: 10px;
+  top: 25px;
+  color: #bcbcbc;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+  font-family: mediam;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.cards .spann svg {
+  color: rgba(210, 53, 52, 0.2901960784);
+  font-size: 18px;
+}
+.cards .h50 {
+  height: 50px;
+}
+.cards .form label .input:-moz-placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+.cards .form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+.cards .form label .input:focus + span,
+.cards .form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+.cards .form label .input:valid + span {
+  color: var(--main-color);
+}
+.cards .custum-file-upload input {
+  display: none;
+}
+.cards .submit {
+  border: none;
+  outline: none;
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: 0.3s ease;
+  font-family: boldd;
+}
+.cards .submit:hover {
+  background-color: #742c2b;
+}
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.lock {
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  animation: translateY 7s infinite;
+  -webkit-animation: translateY 7s infinite;
+}
+
+.lightbg {
+  background-color: #f9f7f7;
+}
+
+@keyframes translateY {
+  0%, 100% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(60px);
+    -webkit-transform: translateY(60px);
+    -moz-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    -o-transform: translateY(60px);
+  }
+}
+select.input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("../../../img/down-arrow.png") no-repeat left center;
+  background-size: 20px;
+  padding-right: 20px;
+  border: 1px solid #ccc;
+}
+
+.phto {
+  width: 100% !important;
+}
+.phto img {
+  width: 100% !important;
+  max-height: 400px !important;
+}
+
+.logform2 {
+  width: 100%;
+}
+
 .card {
   margin: auto;
   background-color: var(--light-color) !important;
@@ -456,8 +717,8 @@ header .logo {
   align-items: center;
   justify-content: center;
   padding: 10px 15px;
-  background-color: #f64b4b;
-  color: #FFF;
+  background-color: var(--orange-color);
+  color: #fff;
   font-family: mediam;
   border: none;
   border-radius: 5px;
@@ -466,11 +727,17 @@ header .logo {
 }
 .card .Add-pruduct:hover {
   background-color: #f64b4b !important;
-  color: #F9F7F7 !important;
+  color: #f9f7f7 !important;
   transition: 0.7s !important;
   transform: translateY(-2px) !important;
+  color: #000;
 }
 
+@media (max-width: 768px) {
+  .cards .title {
+    font-size: 19px;
+  }
+}
 .pattertn {
   background-image: url(../../img/pattern.png);
   background-size: cover;
@@ -632,11 +899,12 @@ header .logo {
   margin: auto;
 }
 .contact .map {
+  height: 75%;
   width: 80%;
-  margin-top: 50px !important;
+  margin-top: 35px !important;
   overflow: hidden;
   border-radius: 15px;
-  border: 1px solid rgba(116, 44, 43, 0.2862745098);
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.4196078431);
   margin: auto;
 }
 .contact .map img {
@@ -839,7 +1107,7 @@ footer {
   background: url("../../img/pattern.png") top center/cover no-repeat;
   position: relative;
   z-index: 9;
-  background-color: rgb(39, 52, 95);
+  background-color: #000;
 }
 footer .logo {
   text-decoration: none;
@@ -1079,4 +1347,203 @@ footer .f-logo p svg {
 
 svg:hover {
   color: #fff;
+}
+
+/* From Uiverse.io by Yaya12085 */
+.login {
+  min-height: 100vh;
+  width: 100%;
+}
+.login .form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+.login .frm {
+  min-height: 90vh;
+}
+.login .title {
+  font-size: 28px;
+  color: var(--main-color);
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  font-family: boldd;
+}
+.login .title::before,
+.login .title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: var(--main-color);
+}
+.login .imgg {
+  height: 100% !important;
+}
+.login .title::before {
+  width: 18px;
+  height: 18px;
+  background-color: var(--main-color);
+}
+.login .title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+.login .message,
+.login .signin {
+  color: #131212;
+  font-size: 14px;
+  font-family: mediam;
+  font-weight: 700;
+}
+.login .signin {
+  text-align: center;
+}
+.login .signin a {
+  color: var(--main-color);
+}
+.login .signin a:hover {
+  -webkit-text-decoration: underline var(--main-color);
+          text-decoration: underline var(--main-color);
+}
+.login .flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+.login .form label {
+  position: relative;
+}
+.login .form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: none !important;
+  border-radius: 10px;
+  background-color: #f9f7f7;
+}
+.login .form label .input + span {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  color: #bcbcbc;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+  font-family: mediam;
+}
+.login .spann {
+  position: absolute;
+  right: 10px;
+  top: 25px;
+  color: #bcbcbc;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+  font-family: mediam;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.login .spann svg {
+  color: rgba(210, 53, 52, 0.2901960784);
+  font-size: 18px;
+}
+.login .h50 {
+  height: 50px;
+}
+.login .form label .input:-moz-placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+.login .form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+.login .form label .input:focus + span,
+.login .form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+.login .form label .input:valid + span {
+  color: var(--main-color);
+}
+.login .custum-file-upload input {
+  display: none;
+}
+.login .submit {
+  border: none;
+  outline: none;
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: 0.3s ease;
+  font-family: boldd;
+}
+.login .submit:hover {
+  background-color: #742c2b;
+}
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.logform {
+  width: 75% !important;
+}
+
+@media screen and (max-width: 768px) {
+  .logform {
+    width: 100% !important;
+  }
+}
+.lock {
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  animation: translateY 7s infinite;
+  -webkit-animation: translateY 7s infinite;
+}
+
+.lightbg {
+  background-color: #f9f7f7;
+}
+
+@keyframes translateY {
+  0%, 100% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(60px);
+    -webkit-transform: translateY(60px);
+    -moz-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    -o-transform: translateY(60px);
+  }
 }/*# sourceMappingURL=style.css.map */
