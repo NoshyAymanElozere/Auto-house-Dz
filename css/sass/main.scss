@@ -1,0 +1,212 @@
+:root {
+  --main-color: #d23534;
+  --light-color: #f9f7f7;
+  --secondery-color: #c4a381;
+  --txtgrey-color: #1312121a;
+  --cart-color: #ffecec;
+  --orange-color: #ff6400;
+}
+
+@font-face {
+  font-family: "mediam";
+  src: url("../../Fonts/ge-dinkum-light-bold.ttf");
+}
+
+@font-face {
+  font-family: "boldd";
+  src: url("../../Fonts/GEDinkum-Bold-1.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "mediam", sans-serif;
+}
+
+body {
+  background-color: var(--light-color);
+  padding: 20px;
+}
+input {
+  width: 100%;
+  padding: 5px;
+  outline: 0;
+  border: none !important;
+  border-radius: 10px;
+  background-color: #f9f7f7;
+}
+
+.table-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  min-width: 1200px; /* To allow horizontal scrolling on smaller screens */
+}
+
+thead {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+thead th {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 13px !important;
+}
+button {
+  font-size: 16px !important;
+}
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid var(--txtgrey-color);
+  transition: background-color 0.3s ease;
+}
+tbody tr td {
+  font-size: 12px !important;
+}
+
+tbody tr:hover {
+  background-color: var(--cart-color);
+}
+
+.btn {
+  padding: 2px 9px !important;
+  border: none !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: var(--orange-color);
+}
+
+.active-btn {
+  background-color: #28a745 !important;
+  color: white !important;
+}
+button {
+  color: white !important;
+}
+.status-btn.inactive {
+  background-color: var(--main-color);
+}
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Custom Scrollbar Styles */
+.table-wrapper::-webkit-scrollbar {
+  height: 4px; /* Height of horizontal scrollbar */
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--main-color); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded scrollbar thumb */
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background-color: var(
+    --light-color
+  ); /* Background color of the scrollbar track */
+}
+
+/* Firefox support */
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 20px !important;
+    font-weight: 600;
+  }
+  button {
+    font-size: 9px !important;
+  }
+  thead th {
+    font-size: 10px !important;
+  }
+  body {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 0.9rem;
+    min-width: 100%;
+  }
+
+  tbody tr td {
+    font-size: 10px !important;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .table-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    font-size: 0.8rem;
+  }
+
+  tbody td {
+    font-size: 0.75rem;
+    padding: 6px;
+  }
+
+  .btn {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
+}
+th,
+td {
+  text-wrap: nowrap !important;
+}
+select.input {
+  padding-left: 15px !important;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(../../../img/down-arrow.png) no-repeat left center !important;
+  background-size: 12px !important;
+  padding-right: 20px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 5px !important;
+}
+.updateBtn {
+  padding: 3px !important;
+  font-size: 9px !important;
+}
+.selected {
+  font-size: 9px !important;
+}
+.message {
+  color: #131212;
+  font-size: 14px;
+  font-family: mediam;
+  font-weight: 700;
+}
