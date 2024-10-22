@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY U</title>
+    <link rel="shortcut icon" href="img/logo.png" />
+    <!-- css file link  -->
+    <link rel="stylesheet" href="css/sass/style.css" />
+    <!-- swiper link  -->
+    <link rel="stylesheet" href="css/lib/swiper-bundle.css" />
+    <!-- bootstrap link  -->
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+    <!-- file font Awsome  -->
+    <link rel="stylesheet" href="css/lib/all.min.csss" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="index.html" class="logo"
+          ><img src="img/logo.png" alt="logo"
+        /></a>
+        <ul>
+          <li class="active"><a href="index.html">الصفحة الرئيسية</a></li>
+
+          <li><a href="whoWeAre.html"> المنشورات </a></li>
+        </ul>
+        <a href="#" class="showmore px-3"
+          >اشترك الان <i class="fa-solid fa-arrow-left"></i
+        ></a>
+      </div>
+    </header>
+    <!-- model for add comment or replay or add post -->
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="exampleModalLabel">اضافه تعليق</h1>
+            <!-- <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button> -->
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label"
+                  >تعليقك :</label
+                >
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+              <label>
+                <div class="input h50 mt-2">
+                  <span class="spann">
+                    <small> أرفع ملف او صوره </small>
+                    <i class="fa-solid fa-file-arrow-up"></i>
+                  </span>
+                  <input type="file" class="input d-none" />
+                </div>
+              </label>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-main">اضافة تعليق</button>
+            <button type="button" class="btn btn-back" data-bs-dismiss="modal">
+              رجوع
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- start spport page  -->
+    <div class="Support">
+      <div class="container">
+        <div class="row">
+          <div class="d-none d-md-block col-md-3"></div>
+          <div class="col-12 col-md-6">
+            <div class="MakePost">
+              <span
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                data-bs-whatever="@mdo"
+                ><i class="fa-regular fa-pen-to-square"></i> انشر بوست
+              </span>
+            </div>
+            <div class="post mt3">
+              <!-- the user how make the post ant the post time -->
+              <div class="UserInfo">
+                <p class="userName">نصحي ايمن</p>
+                <span class="time"> 10:00 الساعه</span>
+              </div>
+
+              <!-- the post content -->
+              <p class="postContent">
+                عندي مشكلة في راديو السيارة، فبعد تشغيله، يبدأ بالعمل بشكل طبيعي
+                لبضع دقائق، لكن بعد فترة قصيرة، الصوت يبدأ بالتقطيع أو يتوقف
+                تماماً. في بعض الأحيان تظهر تشويشات أو ضوضاء غريبة بدلاً من
+                الموسيقى أو المحطات الإذاعية التي أستمع إليها. حاولت تغيير
+                المحطات، ولكن المشكلة تستمر. أحياناً يطفئ الراديو نفسه بشكل
+                مفاجئ أو يستمر في التشغيل بدون صوت.
+              </p>
+              <div class="postImg">
+                <img src="img/imge/radio1.jpg" class="img-fluid" alt="radio" />
+              </div>
+              <hr />
+              <span
+                class="MakeComment"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                data-bs-whatever="@mdo"
+                ><i class="fa-regular fa-comment px-1"></i> تعليق
+              </span>
+              <div class="comentBotoomLine">
+                <hr />
+                <div class="comments">
+                  <div class="comment">
+                    <span class="username">
+                      <span>(أدمن)</span> استاذ يوسف</span
+                    >
+                    <p>
+                      السلام عليكم :حل هذه المشكله يكمن في تغير محطات الراديو
+                      وهذا نتيجه عن تلف احدي القطع ويمكن تغييرها
+                    </p>
+                    <img src="img/imge/radio4.jpg" alt="" />
+                  </div>
+                  <div
+                    class="makeResponse"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    data-bs-whatever="@mdo"
+                  >
+                    رد
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="post my-3">
+              <!-- the user how make the post ant the post time -->
+              <div class="UserInfo">
+                <p class="userName">محمد الجعيدي</p>
+                <span class="time"> 2:00 الساعه</span>
+              </div>
+
+              <!-- the post content -->
+              <p class="postContent">
+                عندي مشكلة أخرى في راديو السيارة، وهي أن الشاشة التي تظهر
+                المحطات والمعلومات لا تعمل بشكل صحيح. أحياناً تظهر الشاشة فارغة
+                تماماً، أو تعرض معلومات غير صحيحة مثل أرقام محطات غير موجودة.
+                بالإضافة إلى ذلك، أزرار التحكم على المقود لا تستجيب عند محاولة
+                تغيير المحطات أو ضبط الصوت. حاولت إعادة تشغيل النظام، ولكن
+                المشكلة لا تزال موجودة، وأحياناً يتأخر الراديو في الاستجابة بعد
+                الضغط على أي زر.
+              </p>
+              <div class="postImg">
+                <img src="img/imge/radio2.jpg" class="img-fluid" alt="radio" />
+              </div>
+              <hr />
+              <span
+                class="MakeComment"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                data-bs-whatever="@mdo"
+                ><i class="fa-regular fa-comment px-1"></i> تعليق
+              </span>
+              <div class="comentBotoomLine">
+                <hr />
+                <div class="comments">
+                  <div class="comment">
+                    <span class="username">
+                      <span>(أدمن)</span> استاذ يوسف</span
+                    >
+                    <p>
+                      السلام عليكم :حل هذه المشكله يكمن في تغير محطات الراديو
+                      وهذا نتيجه عن تلف احدي القطع ويمكن تغييرها
+                    </p>
+                  </div>
+                  <div
+                    class="makeResponse"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    data-bs-whatever="@mdo"
+                  >
+                    رد
+                  </div>
+                  <!-- هنا لو تم الرد مره اخري  -->
+                  <div class="comment me-4">
+                    <span class="username">
+                      <span>(مستخدم)</span> محمد الجعيدي</span
+                    >
+                    <p>شكرا استاذ يوسف لقد تم حب مشكلتي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- هنا زياده حشو بقا  -->
+            <div class="post my-3">
+              <!-- the user how make the post ant the post time -->
+              <div class="UserInfo">
+                <p class="userName">استاذ يوسف</p>
+                <span class="time"> 7:00 الساعه</span>
+              </div>
+
+              <!-- the post content -->
+              <p class="postContent">
+                في بعض الأنظمة، يمكنك إعادة الجهاز إلى إعدادات المصنع
+                الافتراضية. سيساعد ذلك في إزالة أي إعدادات خاطئة أو مشاكل في
+                البرامج. التوجه إلى مختص: إذا استمرت المشاكل بعد تجربة هذه
+                الحلول، من الأفضل أن تتوجه إلى مركز صيانة متخصص لفحص النظام بشكل
+                أعمق.
+              </p>
+              <div class="postImg">
+                <!-- <img src="img/imge/radio2.jpg" class="img-fluid" alt="radio" /> -->
+              </div>
+              <hr />
+              <span
+                class="MakeComment"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                data-bs-whatever="@mdo"
+                ><i class="fa-regular fa-comment px-1"></i> تعليق
+              </span>
+              <div class="comentBotoomLine">
+                <hr />
+                <div class="comments">
+                  <div class="comment">
+                    <span class="username">
+                      <span>(مستخدم)</span> محمد يعقوب</span
+                    >
+                    <p>
+                      قمت بتجربت ماذكرت ولكن عندي بعد الاستفسارت يطولشرحها ف
+                      ستحدث معك علي الواتس مباشرا
+                    </p>
+                  </div>
+                  <div
+                    class="makeResponse"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    data-bs-whatever="@mdo"
+                  >
+                    رد
+                  </div>
+                  <!-- هنا لو تم الرد مره اخري  -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-md-block col-md-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <!-- swiper liberary  -->
+    <script src="js/lib/swiper-bundle.js"></script>
+    <!-- swiper file to custom from peogramer  -->
+    <script src="js/lib/swiper.js"></script>
+    <!-- bootstrap library  -->
+    <script src="js/lib/bootstrap.bundle.js"></script>
+    <!-- font Awsome liberary  -->
+    <script src="js/lib/all.min.js"></script>
+  </body>
+</html>
